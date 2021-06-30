@@ -95,8 +95,9 @@ try:
         print(len(titles))
         df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
         df_review['years'] = 2019
-        print(df_review.head(20))
-        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig') #### 세번째 업뎃
+        print(df_review.head(20))  ### 네번째
+        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig') #### 세번째 업뎃 ###
+        print('hello')
 
 
 except:
