@@ -93,10 +93,10 @@ try:
                 time.sleep(1)
                 print('NoSuchElementException')
         print(len(titles))
-    df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
-    df_review['years'] = 2019
-    print(df_review.head(20))
-    df_review.to_csv('./reviews_2019.csv')
+        df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
+        df_review['years'] = 2019
+        print(df_review.head(20))
+        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i))
 
 
 except:
