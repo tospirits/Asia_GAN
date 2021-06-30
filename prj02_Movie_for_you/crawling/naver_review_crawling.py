@@ -7,6 +7,7 @@
 # 파일명은 reviews_0000.csv 로 해주세요. 0000은 연도입니다.
 # 크롤링 파일은 https://url.kr/74bjw5 에 올려주세요.
 
+
 from selenium import webdriver
 import pandas as pd
 from selenium.common.exceptions import NoSuchElementException  #그런 element없다. xpath가 일정한 규칙성있는 중 중간중간 빠진거 있을때 나오는 에러. 이런 에러에서 프로그램종료하지 말고 어떻게 하라고 할때 사용
@@ -122,3 +123,4 @@ finally:   #try에서 잘 끝나든 except로 끝나든 무조건 하는거
 #             driver.back()
 #         except NoSuchElementException:
 #             print('NoSuchElementException')
+=======
