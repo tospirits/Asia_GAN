@@ -87,6 +87,8 @@ try:
                         print('review page btn click error')
                 except:
                     print('review btn click error')
+                df_review = pd.DataFrame({'titles': titles, 'reviews': reviews})
+                df_review.to_csv('./reviews_2019_{}.csv'.format(j+(i-1)*20), encoding='utf-8-sig')
 
             except NoSuchElementException:
                 driver.get(url)  #에러나면 처음으로 돌아감
@@ -98,6 +100,9 @@ try:
         print(df_review.head(20))  ### 네번째
         df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig') #### 세번째 업뎃 ###
         print('hello')
+    #2019년 전체 저장
+    df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
+    df_review.to_csv('./reviews_2019_.csv')
 
 
 except:
