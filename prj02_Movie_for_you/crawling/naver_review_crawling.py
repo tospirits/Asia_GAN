@@ -57,7 +57,9 @@ try:
                     review_len_xpath = '//*[@id="reviewTab"]/div/div/div[2]/span/em'
                     review_len = driver.find_element_by_xpath(review_len_xpath).text
 
-                    review_len = int(review_len)  #str을 int로 바꾸기
+                    review_len = int(review_len.replace(',', ''))
+                    if review_len > 50:
+                        review_len = 50
                     try:
                         for k in range(1, ((review_len-1) // 10)+2):  #리뷰 개수로 리뷰 리스트 페이지 개수 만큼 for문
                             review_page_xpath = '//*[@id="pagerTagAnchor{}"]'.format(k)
@@ -97,16 +99,14 @@ try:
         print(len(titles))
         df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
         df_review['years'] = 2019
-        print(df_review.head(20))  ### 네번째
-        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig') #### 세번째 업뎃 ###
-        print('hello')
+        print(df_review.head(20))
+        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig')
     #2019년 전체 저장
     df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
-    df_review.to_csv('./reviews_2019_.csv')
+    df_review.to_csv('./reviews_2019_.csv', encoding='utf-8-sig')
 
-
-except:
-    print('except1')
+except Exception as e:    # 오류 내용 띄우기
+    print(e)
 finally:   #try에서 잘 끝나든 except로 끝나든 무조건 하는거
     driver.close()
 
@@ -129,4 +129,3 @@ finally:   #try에서 잘 끝나든 except로 끝나든 무조건 하는거
 #             driver.back()
 #         except NoSuchElementException:
 #             print('NoSuchElementException')
-=======
