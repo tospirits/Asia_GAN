@@ -7,14 +7,14 @@ year = input(str('연도를 입력하세요'))
 df = pd.read_csv(f'./crawling/reviews_{year}.csv', index_col=0)
 print(df.head())
 
-a = '1a25ds94kl가나다라마'
-s = re.sub('[^가-힣]', '', a)    # a의 한글 제외 문자는 null 문자로 채우기
-print(s)
+# a = '1a25ds94kl가나다라마'
+# s = re.sub('[^가-힣]', '', a)    # a의 한글 제외 문자는 null 문자로 채우기
+# print(s)
 
-print(df.iloc[0,1])    # 0행의 리뷰(1번) 컬럼
-print('=======================================')
-sentence = re.sub('[^가-힣| ' ']', '', df.iloc[0, 1])       # 한글과 띄어쓰기만 남기고 전부 제거
-print(sentence)
+# print(df.iloc[0,1])    # 0행의 리뷰(1번) 컬럼
+# print('=======================================')
+# sentence = re.sub('[^가-힣| ' ']', '', df.iloc[0, 1])       # 한글과 띄어쓰기만 남기고 전부 제거
+# print(sentence)
 
 okt = Okt()
 token = okt.pos(sentence, stem=True)        # 동사 원형으로
