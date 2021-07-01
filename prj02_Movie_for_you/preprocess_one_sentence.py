@@ -11,4 +11,4 @@ for title in df['titles'].unique():
 df_one_sentences = pd.DataFrame({'titles':df['titles'].unique(), 'reviews':one_sentences})
 print(df_one_sentences.head())
 print(df_one_sentences.info())
-df_one_sentences.to_csv('./crawling/movie_review_2017_2021.csv', encoding='utf-8-sig')
+df_one_sentences.to_csv('./crawling/movie_review_one_2017_2021.csv', encoding='utf-8-sig')

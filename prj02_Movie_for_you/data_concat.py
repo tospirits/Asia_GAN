@@ -17,7 +17,7 @@ print(df.info())
 df.columns = ['titles', 'cleaned_reviews']
 df.to_csv('./crawling/cleaned_review_2017.csv')
 
-for i in range(20, 22):
+for i in range(18, 22):
     df_temp = pd.read_csv('./crawling/cleaned_review_20{}.csv'.format(i), index_col=0)
     df.drop_duplicates()
     df_temp.dropna(inplace=True)
