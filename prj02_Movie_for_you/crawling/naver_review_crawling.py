@@ -33,7 +33,7 @@ reviews = []
 
 #2019년만
 try:
-    for i in range(11,44):   #2019 개봉영화 리스트 44  #연도별 영화 리스트 페이지수 확인하세요
+    for i in range(1,44):   #2019 개봉영화 리스트 44  #연도별 영화 리스트 페이지수 확인하세요
         url = 'https://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=2019&page={}'.format(i)
         #영화제목 눌러서 들어가기
         # y = driver.find_elements_by_xpath('//*[@id="old_content"]/ul/li')  #영화개수
@@ -89,6 +89,8 @@ try:
                         print('review page btn click error')
                 except:
                     print('review btn click error')
+                df_review = pd.DataFrame({'titles': titles, 'reviews': reviews})
+                df_review.to_csv('./reviews_2019_{}.csv'.format(j+(i-1)*20), encoding='utf-8-sig')
 
             except NoSuchElementException:
                 driver.get(url)  #에러나면 처음으로 돌아감
@@ -99,9 +101,12 @@ try:
         df_review['years'] = 2019
         print(df_review.head(20))
         df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig')
+    #2019년 전체 저장
+    df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
+    df_review.to_csv('./reviews_2019_.csv', encoding='utf-8-sig')
 
-except:
-    print('except1')
+except Exception as e:    # 오류 내용 띄우기
+    print(e)
 finally:   #try에서 잘 끝나든 except로 끝나든 무조건 하는거
     driver.close()
 
