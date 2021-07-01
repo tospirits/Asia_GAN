@@ -31,7 +31,7 @@ print(df_cleaned_token.head(20))
 stopwords = pd.read_csv('./crawling/stopwords.csv', index_col=0)
 print(stopwords.head())
 
-movie_stopwords = ['영화', '배우', '감독']        # 유사도 분석하는데 도움 안 되는 단어
+movie_stopwords = ['영화', '배우', '감독', '관객', '작품', '주인공', '개봉', '촬영']        # 유사도 분석하는데 도움 안 되는 단어
 stopwords_list = list(stopwords.stopword) + movie_stopwords
 
 words = []
