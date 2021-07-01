@@ -33,7 +33,7 @@ reviews = []
 
 #2019년만
 try:
-    for i in range(1,44):   #2019 개봉영화 리스트 44  #연도별 영화 리스트 페이지수 확인하세요
+    for i in range(11,44):   #2019 개봉영화 리스트 44  #연도별 영화 리스트 페이지수 확인하세요
         url = 'https://movie.naver.com/movie/sdb/browsing/bmovie.nhn?open=2019&page={}'.format(i)
         #영화제목 눌러서 들어가기
         # y = driver.find_elements_by_xpath('//*[@id="old_content"]/ul/li')  #영화개수
@@ -57,7 +57,9 @@ try:
                     review_len_xpath = '//*[@id="reviewTab"]/div/div/div[2]/span/em'
                     review_len = driver.find_element_by_xpath(review_len_xpath).text
 
-                    review_len = int(review_len)  #str을 int로 바꾸기
+                    review_len = int(review_len.replace(',', ''))
+                    if review_len > 50:
+                        review_len = 50
                     try:
                         for k in range(1, ((review_len-1) // 10)+2):  #리뷰 개수로 리뷰 리스트 페이지 개수 만큼 for문
                             review_page_xpath = '//*[@id="pagerTagAnchor{}"]'.format(k)
@@ -95,10 +97,8 @@ try:
         print(len(titles))
         df_review = pd.DataFrame({'titles':titles, 'reviews':reviews})
         df_review['years'] = 2019
-        print(df_review.head(20))  ### 네번째
-        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig') #### 세번째 업뎃 ###
-        print('hello')
-
+        print(df_review.head(20))
+        df_review.to_csv('./reviews_2019_{}_page.csv'.format(i), encoding='utf-8-sig')
 
 except:
     print('except1')
@@ -124,4 +124,3 @@ finally:   #try에서 잘 끝나든 except로 끝나든 무조건 하는거
 #             driver.back()
 #         except NoSuchElementException:
 #             print('NoSuchElementException')
-=======
