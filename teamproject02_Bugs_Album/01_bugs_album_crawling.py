@@ -163,7 +163,7 @@ try:
             print(f'checkpoint data saved in {saveDirectory(i)}')       # 체크포인트 저장 알림 메시지
 
             ### 에러 로그 저장 ###
-            if errorPages!=[] or errorPages!=[]:        # 크롤링 과정 중 에러가 있으면
+            if errorPages!=[] or errorContents!=[]:        # 크롤링 과정 중 에러가 있으면
                 with open(errorLogDirectory(i), 'w') as f:      # 에러 로그 작성
                     f.write('==========ERROR PAGES==========')
                     for errorpage in errorPages:
@@ -182,7 +182,7 @@ try:
 
     ## 최종 에러 로그 저장 ###
     with open(errorLogDirectory(finishPage), 'w') as f:
-        if errorPages != [] or errorPages != []:
+        if errorPages != [] or errorContents != []:
             f.write('==========ERROR PAGES==========\n')
             for errorpage in errorPages:
                 f.write(f'{errorpage}\n')
