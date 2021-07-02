@@ -12,7 +12,7 @@ font_name = font_manager.FontProperties(fname=fontpath).get_name()
 rc('font', family=font_name)
 mpl.font_manager._rebuild()
 
-df = pd.read_csv('./crawling/one_sentence_review_2020.csv', index_col=0)
+df = pd.read_csv('./crawling/one_sentence_review_2017_2021.csv', index_col=0)
 df.dropna(inplace=True)
 #print(df.info())
 
@@ -27,7 +27,7 @@ print(words)
 worddict = collections.Counter(words)       # 유니크한 단어를 뽑아 몇 번 나오는지 빈도 표시
 worddict = dict(worddict)
 print(worddict)
-stopwords = ['관객', '작품', '주인공', '개봉', '촬영']
+stopwords = ['관객', '작품', '주인공', '개봉', '촬영', '출연']
 
 # wordcloud_img = WordCloud(background_color = 'white', max_words = 2000,
 #                           font_path = fontpath, stopwords=stopwords).generate_from_frequencies(worddict)

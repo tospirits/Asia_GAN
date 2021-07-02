@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.io import mmwrite, mmread #매트릭스 저장할 때 mmwrite, 읽을 땐 mmread
 import pickle #변수 타입 그대로 저장
 
-df_review_one_sentence = pd.read_csv('./crawling/one_sentence_review_2017_2020.csv', index_col=0)
+df_review_one_sentence = pd.read_csv('./crawling/one_sentence_review_2017_2021.csv', index_col=0)
 print(df_review_one_sentence.info())
 
 Tfidf = TfidfVectorizer(sublinear_tf=True)      # sublinear_tf는 값의 스무딩 여부를 결정하는 파라미터
