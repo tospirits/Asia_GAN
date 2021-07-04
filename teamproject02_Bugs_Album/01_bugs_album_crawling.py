@@ -193,7 +193,7 @@ try:
         else:
             f.write('Congratulations! NO ERROR IN THIS TASK!!\n Special Thanks to 구윤정, 이서하, 그리고 홍두기')
             f.close()
-    print(f'checkpoint log data saved in {errorLogDirectory(finishPage)}')
+    print(f'Log data saved in {errorLogDirectory(finishPage)}')
 
     print('finished')
 
