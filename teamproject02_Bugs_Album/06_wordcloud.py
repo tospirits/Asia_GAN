@@ -17,16 +17,16 @@ from matplotlib import font_manager, rc
 import re
 
 # 한글 폰트 안 깨지도록 설정
-#fontpath = '/content/malgun.ttf'
-#font_name = font_manager.FontProperties(fname=fontpath).get_name()
-#rc('font', family=font_name)
-#mpl.font_manager._rebuild()
+fontpath = './files/malgun.ttf'
+font_name = font_manager.FontProperties(fname=fontpath).get_name()
+rc('font', family=font_name)
+mpl.font_manager._rebuild()
 
-df = pd.read_csv('/content/album_reviews.csv', index_col=0)
+df = pd.read_csv('./crawling/album_reviews.csv', index_col=0)
 df.dropna(inplace=True)
 
 
-#stopwords_list = pd.read_csv('/content/stopwords.csv',index_col=0)
+stopwords_list = pd.read_csv('./crawling/stopwords.csv',index_col=0)
 okt = Okt()
 
 
@@ -47,8 +47,8 @@ for sentence in df.reviews:
     words = []
     for word in df_cleaned_token['word']:
         if len(word) > 1:
-            #if word not in stopwords_list:
-            words.append(word)
+            if word not in stopwords_list:
+                words.append(word)
     cleaned_sentence = ' '.join(words)
     cleaned_sentences.append(cleaned_sentence)
 df['reviews'] = cleaned_sentences
@@ -85,12 +85,7 @@ plt.rc('font', family='NanumBarunGothic')
 plt.show()
 print(df.iloc[album_index,0])
 
-!sudo apt-get install -y fonts-nanum
-!sudo fc-cache -fv
-!rm ~/.cache/matplotlib -rf
-
-!pip install konlpy
-
+"""
 import numpy as np
 import random
 from PIL import Image
@@ -120,3 +115,4 @@ plt.rc('font', family='NanumBarunGothic')
 plt.show()
 print(df.iloc[album_index,0])
 
+"""
