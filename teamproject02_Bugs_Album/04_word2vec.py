@@ -20,9 +20,9 @@ sg = 1
 
 model_pram = '_'.join(list(map(str, ['VS', vector_size, 'W', window, 'MC', min_count, 'E', epochs, 'SG', sg])))
 
-review_word = pd.read_csv('@@@@@@@@_경로_입력_@@@@@@@@', index_col=0)
+review_word = pd.read_csv('./datasets/cleaned_reviews_word2vec.csv', index_col=0)
 print(review_word.info())
-cleaned_token_review = list(review_word['cleaned_reviews'])
+cleaned_token_review = list(review_word['cleaned_sentences'])
 print(len(cleaned_token_review))
 cleaned_tokens = []
 count = 0
