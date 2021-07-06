@@ -140,7 +140,7 @@ for sentence in df_w2v.textdata:
   df_cleaned_token = df_token[(df_token['class'] == 'Noun') |
                               (df_token['class'] == 'Verb') |
                               (df_token['class'] == 'Adjective') |
-                              (df_token['class'] == 'Number')]
+                              (df_token['class'] == 'Number')]     #숫자포함 특정단어의 class가 Number
 
   words = []
   for word in df_cleaned_token['word']:
