@@ -31,7 +31,7 @@ for sentence in df.textdata:
     print('.', end='')
   if count % 100 == 0:
     print('')   #100개마다 줄바꿈하기
-  kor_sentence = re.sub('[^가-힣 | ' ']', '', sentence)   #한글, 띄어쓰기만 남기기
+  kor_sentence = re.sub('[^가-힣 | ' ' ]', '', sentence)   #한글, 띄어쓰기만 남기기
   okt = Okt()
   token = okt.pos(kor_sentence, stem=True)
   df_token = pd.DataFrame(token, columns=['word', 'class'])
@@ -58,7 +58,7 @@ for sentence in df.textdata:
       words.append(word)
 
   #필요한 숫자
-  num_sentence = re.compile(r'\d\d\d\d년 | \d\d\d\d년대 |\d집')
+  num_sentence = re.compile(r' \d*년대 | \d*년 | \d*집 ')  #~년대, ~년, ~집 등 숫자 포함 특정 단어 살리기
   num_sentence = num_sentence.search(sentence)
   if num_sentence is not None:
       num = num_sentence.group()
@@ -131,7 +131,7 @@ for sentence in df_w2v.textdata:
     print('.', end='')
   if count % 100 == 0:
     print('')   #100개마다 줄바꿈하기
-  kor_sentence = re.sub('[^가-힣 | ' ']', '', sentence)   #한글, 띄어쓰기만 남기기
+  kor_sentence = re.sub('[^가-힣 | ' ' | \d*년대 | \d*년 | \d*집 ]', '', sentence)   #한글, 띄어쓰기, 숫자포함 특정단어만 남기기
   okt = Okt()
   token = okt.pos(kor_sentence, stem=True)
   df_token = pd.DataFrame(token, columns=['word', 'class'])
@@ -139,20 +139,14 @@ for sentence in df_w2v.textdata:
 
   df_cleaned_token = df_token[(df_token['class'] == 'Noun') |
                               (df_token['class'] == 'Verb') |
-                              (df_token['class'] == 'Adjective')]
+                              (df_token['class'] == 'Adjective') |
+                              (df_token['class'] == 'Number')]     #숫자포함 특정단어의 class가 Number
 
   words = []
   for word in df_cleaned_token['word']:
       if len(word) > 1:
           if word not in stopwords_list:
               words.append(word)
-
-# 필요한 숫자
-  num_sentence = re.compile(r'\d\d\d\d년 | \d\d\d\d년대 |\d집')
-  num_sentence = num_sentence.search(sentence)
-  if num_sentence is not None:
-      num = num_sentence.group()
-      words.append(num)
 
   cleaned_sentence = ' '.join(words)   #하나의 문자로 이어붙이고
   cleaned_sentences.append(cleaned_sentence)
