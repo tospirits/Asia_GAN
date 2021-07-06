@@ -41,5 +41,5 @@ model = Word2Vec(cleaned_tokens,
                  sg=sg)                     # skip_gram 알고리즘 적용
 
 model.save(saveDirectory(model_pram))
-print(model.wv.vocab.keys())
-print(len(model.wv.vocab.keys()))
+print(model.wv.index_to_key)
+print(len(model.wv.index_to_key))
