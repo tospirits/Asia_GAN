@@ -5,14 +5,14 @@ from sklearn.manifold import TSNE
 from matplotlib import font_manager, rc
 import matplotlib as mpl
 
-font_path = './malgun.ttf'
+font_path = './files/malgun.ttf'
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 mpl.rcParams['axes.unicode_minus']=False
 rc('font', family=font_name)
 
-embedding_model = Word2Vec.load('word2VecModel_2017_2021.model')
-key_word = '가을'
-WANTED = int(input('가장 유사한 키워드 개수를 입력하세요'))
+embedding_model = Word2Vec.load('./models/VS_50_W_2_MC_5_E_50_SG_1.model')
+key_word = str(input('찾으시는 키워드를 입력하세요.'))
+WANTED = int(input('가장 유사한 키워드 개수를 입력하세요.'))
 sim_word = embedding_model.wv.most_similar(key_word, topn=WANTED)       # 가장 유사한 10개 추출
 print(sim_word)
 

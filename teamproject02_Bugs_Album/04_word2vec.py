@@ -3,8 +3,8 @@ import pandas as pd
 from gensim.models import Word2Vec
 
 def makeWord2VecModel(model_save_path, vector_size, window, min_count, workers, epochs, sg):
-    csv_path = '/Users/san/work/python/Deep_Learning/Asia_GAN-1/teamproject02_Bugs_Album/datasets/cleaned_reviews_word2vec.csv'
-    model_pram = '_'.join(list(map(str, ['VS', vector_size, 'W', window, 'MC', min_count, 'E', epochs, 'SG', sg])))
+    csv_path = './datasets/cleaned_reviews_word2vec.csv'
+    model_pram = '_'.join(list(map(str, ['VS1', vector_size, 'W', window, 'MC', min_count, 'E', epochs, 'SG', sg])))
 
     print('\n{:@^50}'.format(model_pram))
     review_word = pd.read_csv(csv_path, index_col=0)
@@ -46,7 +46,7 @@ for vector_size in vector_sizes:
         for min_count in min_counts:
             for epochs in epochses:
                 makeWord2VecModel(model_save_path, vector_size, window, min_count, workers, epochs, sg)
-=======
+
 model_pram = '_'.join(list(map(str, ['VS', vector_size, 'W', window, 'MC', min_count, 'E', epochs, 'SG', sg])))
 
 review_word = pd.read_csv('./datasets/cleaned_reviews_word2vec.csv', index_col=0)
