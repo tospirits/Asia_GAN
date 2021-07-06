@@ -4,7 +4,7 @@ from scipy.io import mmwrite
 import pickle
 import os
 
-df = pd.read_csv('./crawling/cleaned_album_reviews.csv', index_col=0)
+df = pd.read_csv('./datasets/cleaned_reviews_tfidf.csv', index_col=0)
 print(df.info())
 
 
