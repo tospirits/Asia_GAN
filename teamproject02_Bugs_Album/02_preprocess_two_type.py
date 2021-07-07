@@ -11,7 +11,7 @@ album_stopwords = ['벅스', '앨범', '작품', '순위', '보컬', '참여', '
 stopwords_list = list(kor_stopwords.stopword) + album_stopwords
 
 #tfidf_ preprocessing
-df = pd.read_csv('./crawling/album_reviews.csv', index_col=0)
+df = pd.read_csv('./crawling/bugs_album_reviews.csv', index_col=0)
 print(df.info())
 
 #중복 리뷰 삭제

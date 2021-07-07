@@ -2,10 +2,10 @@ import pandas as pd
 import glob
 import os
 
-input_file = r'./datasets' # csv파일들이 있는 디렉토리 위치
-output_file = r'./datasets/album_reviews__.csv' # 병합하고 저장하려는 파일명
+input_file = r'./crawling' # csv파일들이 있는 디렉토리 위치
+output_file = r'./crawling/bugs_album_reviews.csv' # 병합하고 저장하려는 파일명
 
-allFile_list = glob.glob(os.path.join(input_file, 'bugs_album_page_*')) # glob함수로 reviews_2017_로 시작하는 파일들을 모은다
+allFile_list = glob.glob(os.path.join(input_file, 'bugs_album_page_*')) # glob함수로 bugs_album_page로 시작하는 파일들을 모은다
 print(allFile_list)
 allData = [] # 읽어 들인 csv파일 내용을 저장할 빈 리스트를 하나 만든다
 for file in allFile_list:
