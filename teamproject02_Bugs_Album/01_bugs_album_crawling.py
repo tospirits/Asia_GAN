@@ -2,14 +2,14 @@
 
 # https://music.bugs.co.kr/recomreview
 # 타겟 데이터 수 : 4,741개 (2021년 7월 2일 기준)
-# 크롤링할 데이터 : 앨범명, 가수, 리뷰 제목, 리뷰 내용
+# 크롤링할 데이터 : 고유번호(링크), 앨범명, 가수, 리뷰 제목, 리뷰 내용
 # 크롤링 작업 URL : https://music.bugs.co.kr/recomreview?&order=listorder&page={pageNumber}
 # 총 페이지 수 : 475 페이지
 
 # 크롤링은 160페이지씩 진행하겠습니다. 이서하 : 1-160 / 구윤정 : 161 - 320 / 홍두기 : 321 - 475
 # 10페이지마다 'bugs_album_page_1_10.csv' 형태로 개별 중간 저장, 160페이지(또는 마지막 페이지)에 도달하면 'bugs_album_page_{startPage}_{finishPage}.csv'로 최종 저장합니다.
 # 저장 형식은 csv이며, 인코딩은 utf-8-sig입니다.
-# 컬럼명은 ['album titles', 'artists', 'review titles', 'reviews']로 통일해 주세요.
+# 컬럼명은 ['album links', 'album titles', 'artists', 'review titles', 'reviews']로 통일해 주세요.
 # 크롤링 파일은 https://url.kr/8its76 에 올려주세요.
 
 from selenium import webdriver
@@ -26,7 +26,8 @@ def pageNumber():       # 시작 페이지, 종료 페이지 지정 함수
     finishPage = int(input('종료 페이지를 입력해주세요.'))
 
 def resetData():        # 필요 변수 생성 및 초기화 함수
-    global albumTitles, artists, reviewTitles, reviews, multiArtists        # 전역변수 선언
+    global albumLinks, albumTitles, artists, reviewTitles, reviews, multiArtists        # 전역변수 선언
+    albumLinks = []         # 고유번호(링크)
     albumTitles = []        # 앨범명
     artists = []            # 아티스트명
     reviewTitles = []       # 리뷰 제목
@@ -89,13 +90,25 @@ try:
                     continue        # 이하 코드 실행하지 않고 다음 페이지로 넘어가기
 
         for j in range(1, 11):      # 한 페이지당 콘텐츠 수 10개씩 반복
+            try:        # 고유번호(링크)
+                albumLink_xpath = f'//*[@id="container"]/section/div/ul/li[{j}]/div/figure/figcaption/a'
+                albumLink = driver.find_element_by_xpath(albumLink_xpath)
+                albumLink = albumLink.get_attribute("href")     # a href 태그의 주소만 가져오기
+                albumLink = albumLink.split('album/')[1]        # album/ 뒤의 고유번호 이하 값 가져오기
+                albumLink = albumLink.split('?')[0]             # 고유번호 뒤의 값 제거
+            except Exception as e:
+                print('\n album link crawling error \n', e)
+                errorContents.append(
+                    f'{i} page, contents number: {j} album link crawling error')  # 에러 콘텐츠 리스트에 페이지, 번호, 타입 넣어 추후 작업 가능하도록 저장
+                continue  # 이하 코드 실행하지 않고 다음 콘텐츠로 넘어가기
+
             try:        # 앨범명
                 albumTitle_xpath = f'//*[@id="container"]/section/div/ul/li[{j}]/div/figure/figcaption/a'
                 albumTitle = driver.find_element_by_xpath(albumTitle_xpath).text
             except Exception as e:
                 print('\n album title crawling error \n', e)
-                errorContents.append(f'{i} page, contents number: {j} album title crawling error')      # 에러 콘텐츠 리스트에 페이지, 번호, 타입 넣어 추후 작업 가능하도록 저장
-                continue        # 이하 코드 실행하지 않고 다음 콘텐츠로 넘어가기
+                errorContents.append(f'{i} page, contents number: {j} album title crawling error')
+                continue
 
             try:        # 아티스트명
                 artist_xpath = f'//*[@id="container"]/section/div/ul/li[{j}]/div/figure/figcaption/p[1]/a'      # 아티스트 1명인 경우
@@ -144,6 +157,7 @@ try:
                         artist = artist + ' & ' + m.text     # '가수 & 가수 & 가수' 형식으로 지정
                     multiArtists.clear()        # 사용한 리스트 초기화
 
+                albumLinks.append(albumLink)
                 albumTitles.append(albumTitle)
                 artists.append(artist)
                 reviewTitles.append(reviewTitle)
@@ -157,7 +171,7 @@ try:
 
         ### 체크포인트 저장 ###
         if (i % 10) == 0:       # 10, 20, ..., 470 페이지에 도달할 때마다 csv 파일 저장
-            df_temp = pd.DataFrame({'album titles': albumTitles, 'artists': artists, 'review titles': reviewTitles,
+            df_temp = pd.DataFrame({'album links': albumLinks, 'album titles': albumTitles, 'artists': artists, 'review titles': reviewTitles,
                                'reviews': reviews})     # 데이터프레임 4개 컬럼에 각 데이터 입력
             df_temp.to_csv(saveDirectory(i), encoding='utf-8-sig')      # saveDirectory 함수 호출하며 경로 지정 및 엑셀과 파이썬 양쪽에서 글자 깨지지 않도록 utf-8-sig 인코딩
             print(f'checkpoint data saved in {saveDirectory(i)}')       # 체크포인트 저장 알림 메시지
@@ -176,7 +190,7 @@ try:
                 print(f'checkpoint log data saved in {errorLogDirectory(i)}')       # 체크포인트 에러 로그 저장 알림 메시지
 
     ### 최종 저장 ###
-    df = pd.DataFrame({'album titles':albumTitles, 'artists':artists, 'review titles':reviewTitles, 'reviews':reviews})
+    df = pd.DataFrame({'album links': albumLinks, 'album titles':albumTitles, 'artists':artists, 'review titles':reviewTitles, 'reviews':reviews})
     df.to_csv(saveDirectory(finishPage), encoding='utf-8-sig')
     print(f'All data saved in {saveDirectory(finishPage)}')
 
