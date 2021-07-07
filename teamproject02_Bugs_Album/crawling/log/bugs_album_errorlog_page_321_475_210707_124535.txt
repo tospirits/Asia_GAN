@@ -1,0 +1,12 @@
+==========ERROR PAGES==========
+
+==========ERROR CONTENTS==========
+475 page, contents number: 2 album link crawling error
+475 page, contents number: 3 album link crawling error
+475 page, contents number: 4 album link crawling error
+475 page, contents number: 5 album link crawling error
+475 page, contents number: 6 album link crawling error
+475 page, contents number: 7 album link crawling error
+475 page, contents number: 8 album link crawling error
+475 page, contents number: 9 album link crawling error
+475 page, contents number: 10 album link crawling error
