@@ -114,14 +114,14 @@ stopwords_list = list(kor_stopwords.stopword) + album_stopwords
 
 # word2vec_preprocessing
 # 영어 지우기, 중복 리뷰 합치기
-df = pd.read_csv('./crawling/album_reviews.csv', index_col=0)
+df = pd.read_csv('./crawling/bugs_album_reviews.csv', index_col=0)
 df.drop(df.index[3082], inplace=True)
 
 # reviews컬럼에서 벅스선정~ 문장 삭제시키기
 substr = '벅스가'
 nobugs_review = []
 for i in df['reviews']:
-    if i.rfind(substr) is not -1:
+    if i.rfind(substr) != -1:
         i = i[:i.rfind(substr)] + i[i.rfind(substr) + 30:]  # 벅스가 선정한~.가 29~30자라서 30자
         nobugs_review.append(i)
     else:
