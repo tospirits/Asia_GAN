@@ -4,7 +4,7 @@ import pandas as pd
 from gensim.models import Word2Vec
 
 def makeWord2VecModel(model_save_path, key_save_path, vector_size, window, min_count, workers, epochs, sg):
-    csv_path = '/Users/san/work/python/Deep_Learning/Asia_GAN-1/teamproject02_Bugs_Album/datasets/cleaned_reviews_word2vec.csv'
+    csv_path = './datasets/cleaned_reviews_word2vec.csv'
     model_pram = '_'.join(list(map(str, ['VS', vector_size, 'W', window, 'MC', min_count, 'E', epochs, 'SG', sg])))
 
     print('\n{:@^50}'.format(model_pram))
