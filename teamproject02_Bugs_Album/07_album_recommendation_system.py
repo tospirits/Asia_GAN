@@ -7,10 +7,11 @@ from gensim.models import Word2Vec
 def getRecommendation(cosine_sim):      # 코사인 유사도를 높은 순으로 정렬하여 유사한 앨범의 인덱스 구하는 함수
     simScore = list(enumerate(cosine_sim[0]))
     simScore = sorted(simScore, key=lambda x:x[1], reverse=True)
-    simScore = simScore[1:11]
+    simScore = simScore[0:30]
     albumidx = [i[0] for i in simScore]
     recAlbumList = df.iloc[albumidx]
     return recAlbumList
+
 
 ### tfidf를 활용한 앨범 검색 시 유사 앨범 찾기 ###
 df = pd.read_csv('./datasets/cleaned_reviews_tfidf.csv', index_col=0)       # clean data load
@@ -47,7 +48,7 @@ while True:
 
 cosine_sim = linear_kernel(Tfidf_matrix[album_idx], Tfidf_matrix)       # 코사인 유사도
 recommendation = getRecommendation(cosine_sim)      # 추천 함수 실행
-print(recommendation.iloc[:, 0:2])      # 0번 컬럼(앨범명)과 1번 컬럼(아티스트명)만 출력
+print(recommendation.iloc[1:11, 0:2])      # 0번 컬럼(앨범명)과 1번 컬럼(아티스트명)만 출력
 
 #####################################
 
@@ -78,7 +79,10 @@ while True:
         break
 
 recommendation = getRecommendation(total_cosine_sim)
-print(recommendation.iloc[:, 0:2])
+
+recommendation = recommendation[recommendation.artists != artist]       # 해당 아티스트의 앨범 제거
+
+print(recommendation.iloc[1:11, 0:2])
 
 
 #####################################
@@ -104,7 +108,7 @@ while True:
         sentence_vec = Tfidf.transform(sentence)
         cosine_sim = linear_kernel(sentence_vec, Tfidf_matrix)
         recommendation = getRecommendation(cosine_sim)
-        print(recommendation.iloc[:, 0:2])
+        print(recommendation.iloc[0:10, 0:2])
         break
 
     except:
