@@ -62,7 +62,7 @@
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
     </font>
    </property>
@@ -78,6 +78,9 @@
      <width>75</width>
      <height>75</height>
     </rect>
+   </property>
+   <property name="maximum">
+    <number>99</number>
    </property>
    <property name="value">
     <number>0</number>
@@ -95,15 +98,15 @@
   <widget class="QLabel" name="titleLabel">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
+     <x>15</x>
+     <y>5</y>
      <width>281</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>20</pointsize>
     </font>
    </property>
@@ -203,14 +206,14 @@
    <property name="geometry">
     <rect>
      <x>35</x>
-     <y>520</y>
+     <y>510</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -241,16 +244,16 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="keywordTitleLabel">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>460</y>
-     <width>241</width>
-     <height>41</height>
+     <x>300</x>
+     <y>450</y>
+     <width>300</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>20</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>16</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -269,14 +272,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>175</x>
-     <y>520</y>
+     <y>510</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -311,14 +314,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>315</x>
-     <y>520</y>
+     <y>510</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -353,14 +356,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>455</x>
-     <y>520</y>
+     <y>510</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -395,14 +398,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>595</x>
-     <y>520</y>
+     <y>510</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -437,14 +440,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>735</x>
-     <y>520</y>
+     <y>510</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -479,14 +482,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>105</x>
-     <y>570</y>
+     <y>560</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -521,14 +524,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>245</x>
-     <y>570</y>
+     <y>560</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -563,14 +566,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>385</x>
-     <y>570</y>
+     <y>560</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -605,14 +608,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>525</x>
-     <y>570</y>
+     <y>560</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -647,14 +650,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>665</x>
-     <y>570</y>
+     <y>560</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -689,14 +692,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>175</x>
-     <y>620</y>
+     <y>610</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -731,14 +734,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>315</x>
-     <y>620</y>
+     <y>610</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -773,14 +776,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>455</x>
-     <y>620</y>
+     <y>610</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -815,14 +818,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>595</x>
-     <y>620</y>
+     <y>610</y>
      <width>130</width>
      <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>16</pointsize>
      <kerning>true</kerning>
     </font>
@@ -854,7 +857,7 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>700</y>
+     <y>690</y>
      <width>125</width>
      <height>125</height>
     </rect>
@@ -873,7 +876,7 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>430</x>
-     <y>700</y>
+     <y>690</y>
      <width>125</width>
      <height>125</height>
     </rect>
@@ -892,7 +895,7 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>680</x>
-     <y>700</y>
+     <y>690</y>
      <width>125</width>
      <height>125</height>
     </rect>
@@ -911,14 +914,14 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>700</y>
-     <width>131</width>
+     <y>690</y>
+     <width>151</width>
      <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>14</pointsize>
      <weight>75</weight>
      <bold>true</bold>
@@ -939,7 +942,7 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -992,114 +995,211 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>840</y>
+     <y>810</y>
      <width>220</width>
-     <height>16</height>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>12</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
     <string>Album Title</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="artistLabel_01">
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>870</y>
+     <y>830</y>
      <width>220</width>
-     <height>16</height>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>12</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Artist</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#404040;&quot;&gt;Artist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="albumtitleLabel_02">
    <property name="geometry">
     <rect>
      <x>430</x>
-     <y>840</y>
+     <y>810</y>
      <width>220</width>
-     <height>16</height>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>12</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
     <string>Album Title</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="albumtitleLabel_03">
    <property name="geometry">
     <rect>
      <x>680</x>
-     <y>840</y>
+     <y>810</y>
      <width>220</width>
-     <height>16</height>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>12</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
     <string>Album Title</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="artistLabel_02">
    <property name="geometry">
     <rect>
      <x>430</x>
-     <y>870</y>
+     <y>830</y>
      <width>220</width>
-     <height>16</height>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>12</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Artist</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#404040;&quot;&gt;Artist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="artistLabel_03">
    <property name="geometry">
     <rect>
      <x>680</x>
-     <y>870</y>
+     <y>830</y>
      <width>220</width>
-     <height>16</height>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>12</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Artist</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#404040;&quot;&gt;Artist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errorLabel">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>420</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>맑은 고딕</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_1">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>689</y>
+     <width>127</width>
+     <height>127</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_2">
+   <property name="geometry">
+    <rect>
+     <x>429</x>
+     <y>689</y>
+     <width>127</width>
+     <height>127</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_3">
+   <property name="geometry">
+    <rect>
+     <x>679</x>
+     <y>689</y>
+     <width>127</width>
+     <height>127</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>

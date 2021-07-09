@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>252</x>
-     <y>265</y>
+     <y>260</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -39,7 +39,7 @@
    <property name="geometry">
     <rect>
      <x>32</x>
-     <y>30</y>
+     <y>20</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -61,7 +61,7 @@
    <property name="geometry">
     <rect>
      <x>472</x>
-     <y>30</y>
+     <y>20</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -80,7 +80,7 @@
    <property name="geometry">
     <rect>
      <x>252</x>
-     <y>30</y>
+     <y>20</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -102,7 +102,7 @@
    <property name="geometry">
     <rect>
      <x>32</x>
-     <y>265</y>
+     <y>260</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -121,7 +121,7 @@
    <property name="geometry">
     <rect>
      <x>472</x>
-     <y>265</y>
+     <y>260</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -143,7 +143,7 @@
    <property name="geometry">
     <rect>
      <x>692</x>
-     <y>30</y>
+     <y>20</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -162,7 +162,7 @@
    <property name="geometry">
     <rect>
      <x>692</x>
-     <y>265</y>
+     <y>260</y>
      <width>175</width>
      <height>175</height>
     </rect>
@@ -203,15 +203,15 @@
    <property name="geometry">
     <rect>
      <x>32</x>
-     <y>205</y>
+     <y>195</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>10</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>9</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -220,20 +220,26 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_5">
    <property name="geometry">
     <rect>
      <x>32</x>
-     <y>440</y>
+     <y>435</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -243,21 +249,24 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_2">
    <property name="geometry">
     <rect>
      <x>252</x>
-     <y>205</y>
+     <y>195</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>10</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>9</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -266,20 +275,23 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_6">
    <property name="geometry">
     <rect>
      <x>252</x>
-     <y>440</y>
+     <y>435</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -289,21 +301,24 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_3">
    <property name="geometry">
     <rect>
      <x>472</x>
-     <y>205</y>
+     <y>195</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>10</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>9</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -312,20 +327,23 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_7">
    <property name="geometry">
     <rect>
      <x>472</x>
-     <y>440</y>
+     <y>435</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -335,21 +353,24 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_4">
    <property name="geometry">
     <rect>
      <x>692</x>
-     <y>205</y>
+     <y>195</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
-     <pointsize>10</pointsize>
+     <family>맑은 고딕</family>
+     <pointsize>9</pointsize>
     </font>
    </property>
    <property name="styleSheet">
@@ -358,20 +379,23 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="name_8">
    <property name="geometry">
     <rect>
      <x>692</x>
-     <y>440</y>
+     <y>435</y>
      <width>175</width>
-     <height>60</height>
+     <height>65</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>나눔고딕</family>
+     <family>맑은 고딕</family>
      <pointsize>10</pointsize>
     </font>
    </property>
@@ -381,6 +405,161 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_1">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>19</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_2">
+   <property name="geometry">
+    <rect>
+     <x>251</x>
+     <y>19</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_3">
+   <property name="geometry">
+    <rect>
+     <x>471</x>
+     <y>19</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_4">
+   <property name="geometry">
+    <rect>
+     <x>691</x>
+     <y>19</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_5">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>259</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_6">
+   <property name="geometry">
+    <rect>
+     <x>251</x>
+     <y>259</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_7">
+   <property name="geometry">
+    <rect>
+     <x>471</x>
+     <y>259</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="linkButton_8">
+   <property name="geometry">
+    <rect>
+     <x>691</x>
+     <y>259</y>
+     <width>177</width>
+     <height>242</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>background</zorder>
@@ -400,6 +579,14 @@ color: rgb(255, 255, 255);</string>
   <zorder>name_7</zorder>
   <zorder>name_4</zorder>
   <zorder>name_8</zorder>
+  <zorder>linkButton_1</zorder>
+  <zorder>linkButton_2</zorder>
+  <zorder>linkButton_3</zorder>
+  <zorder>linkButton_4</zorder>
+  <zorder>linkButton_5</zorder>
+  <zorder>linkButton_6</zorder>
+  <zorder>linkButton_7</zorder>
+  <zorder>linkButton_8</zorder>
  </widget>
  <resources/>
  <connections/>
